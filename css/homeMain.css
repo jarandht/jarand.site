@@ -1,0 +1,87 @@
+
+.categories{
+    display: grid;
+    gap: 15px;
+}
+.categoriesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.categoriesContainer div{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 0px var(--light10) !important;
+    background-color: var(--dark20);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.categoriesContainer div img{
+    height: 25px;
+}
+.categoriesContainer div p{
+    font-size: 20px;
+}
+.articles{
+    display: grid;
+    gap: 15px;
+}
+.articlesContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+@media screen and (max-width: 1200px){
+    .articlesContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (min-width: 1700px){
+    .articlesContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.articlesContainer div{
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 0px var(--light10) !important;
+    background-color: var(--dark20);
+    background-position: left;
+    background-size: cover;
+}
+.articlesContainer div .title{
+    font-size: 25px;
+    color: white;
+}
+.articlesContainer div .description{
+    font-size: 20px;
+    text-shadow: 0 0 10px 0 black;
+}
+.articlesContainer .viewAll p{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.articlesContainer .viewAll:hover p{
+    text-decoration: underline;
+}
+.articlesContainer .viewAll p{
+    color: white;
+}
+.articlesContainer .viewAll p::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    display: block;
+    background-image: url(https://img.gamehub.community/link.png);
+    background-position: center;
+    background-size: cover;
+}
+
+:is(.categoriesContainer, .articlesContainer) div{
+    transition: .1s;
+}
+:is(.categoriesContainer, .articlesContainer) div:hover{
+    box-shadow: 0 0 2px 1px var(--light10) !important;
+}

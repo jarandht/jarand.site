@@ -1,0 +1,83 @@
+.nav{
+    width: 250px;
+    padding: 20px;
+    background-color: var(--dark20);
+    display: grid;
+    justify-items: center;
+    grid-template-rows: max-content 1fr max-content;
+    gap: 40px;
+    border-right: 1px solid var(--dark00);
+    animation: slideInn 1s;
+}
+@keyframes slideInn{
+    0% {transform: translateX(-200px); opacity: 0;}
+    100% {    transform: translateX(0px); opacity: 1;}
+}
+.profile{
+    height: max-content;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: 20px;
+    justify-items: center;
+}
+.profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100vh;
+    border: 5px solid var(--dark19);
+}
+.profile h1{
+    font-size: 25px;
+    text-align: center;
+    color: var(--light10);
+}
+.navButtons{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.navButtons div{
+    padding: 15px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--dark19) !important;
+    transition: .1s;
+}
+.navButtons div:hover{
+    opacity: 1;
+    box-shadow: 0 0 2px 0px var(--light10);
+    background-color: var(--dark19) !important;
+}
+.navButtonActive{
+    background-color: var(--dark19) !important;
+    box-shadow: 0 0 2px 0px var(--light10) !important;
+    opacity: 1 !important;
+}
+.navButtonExternal::after{
+    content: '';
+    height: 15px;
+    width: 15px;
+    display: block;
+    background-image: url(https://img.gamehub.community/link.png);
+    background-position: center;
+    background-size: cover;
+    opacity: .5;
+}
+.navButtons img{
+    height: 20px;
+    width: 20px;
+}
+.navButtons p{
+    font-size: 18px;
+    color: var(--light10);
+}
+.copyright p{
+    color: var(--light10);
+    font-size: 18px;
+    text-transform: capitalize;
+}
