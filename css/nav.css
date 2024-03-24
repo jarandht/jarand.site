@@ -20,11 +20,13 @@
     gap: 20px;
     justify-items: center;
 }
-.profile img{
+.profileImg{
     height: 150px;
     width: 150px;
     border-radius: 100vh;
     border: 5px solid var(--dark19);
+    background-position: center;
+    background-size: 100px;
 }
 .profile h1{
     font-size: 25px;
