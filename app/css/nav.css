@@ -47,6 +47,7 @@
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     gap: 10px;
+    row-gap: 1px;
     background-color: var(--dark19) !important;
     transition: .1s;
 }
@@ -54,6 +55,7 @@
     opacity: 1;
     box-shadow: 0 0 2px 0px var(--light10);
     background-color: var(--dark19) !important;
+    cursor: pointer;
 }
 .navButtonActive{
     background-color: var(--dark19) !important;
@@ -78,6 +80,48 @@
     font-size: 18px;
     color: var(--light10);
 }
+
+/* Dropdown */
+.navButtonDropdown i{
+    grid-column:  1/4;
+    height: 15px;
+    display: none;
+}
+.navButtonDropdown::after{
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-image: url(/img/gray_arrow_slim.png);
+    background-size: cover;
+    transition: .3s;
+    grid-column: 3;
+    grid-row: 1;
+}
+.navButtonDropdown:hover::after{
+    rotate: 90deg;
+}
+.navButtonDropdown:hover :is(i, a:has(span)){
+    display: grid;
+}
+.navButtonDropdown a:has(span){
+    grid-column:  1/4;
+    display: none;
+}
+.navButtonDropdown_child{
+    padding: 10px 15px 10px 15px;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--dark19) !important;
+    transition: .1s;
+    border-radius: 5px;
+    display: grid;
+}
+.navButtonDropdown_child:hover{
+    background-color: var(--dark20) !important;
+}
+
 .copyright p{
     color: var(--light10);
     font-size: 18px;

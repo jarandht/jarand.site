@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  # apace
+  apache:
+    image: php:8.0-apache   
+    container_name: jarand.site
+    ports:
+      - '8010:80'
+    restart: always
+    volumes:
+      - ./app:/var/www/html/
