@@ -47,7 +47,7 @@
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     gap: 10px;
-    row-gap: 1px;
+    row-gap: 5px;
     background-color: var(--dark19) !important;
     transition: .1s;
 }
@@ -88,7 +88,7 @@
 /* Dropdown */
 .navButtonDropdown i{
     grid-column:  1/4;
-    height: 15px;
+    height: 5px;
     display: none;
 }
 .navButtonDropdown::after{

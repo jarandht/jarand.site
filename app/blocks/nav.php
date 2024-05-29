@@ -12,12 +12,15 @@ $current_page = $_SERVER['REQUEST_URI'];
         <h1>Jarand Holmefjord Tyssen</h1>
     </div>
     <div class="navButtons">
-        <a href="/home"><div <?php echo strpos($current_page, '/home') !== false ? 'class="navButtonActive"' : ''; ?>><img src="/img/homegrey.png" alt=""><p>Home</p></div></a>
+        <a href="/home"><div <?php echo $current_page === '/home' ? 'class="c"' : ''; ?>><img src="/img/homegrey.png" alt=""><p>Home</p></div></a>
         <div class="navButtonDropdown <?php echo strpos($current_page, '/projects') !== false ? 'navButtonActive' : ''; ?> <?php echo isset($_SESSION['dropdownOpen']) && $_SESSION['dropdownOpen'] ? 'active' : ''; ?>">
             <img src="/img/gray_docs.png" alt=""><p>Projects</p>
             <i></i>
             <a href="/projects/websites"><span class="navButtonDropdown_child <?php echo strpos($current_page, '/projects/websites') !== false ? 'navButtonActive navButtonDropdown_child_Active' : ''; ?>">
                 <img src="/img/gray_internet.png" alt=""><p>Websites</p>
+            </span></a>
+            <a href="/projects/other"><span class="navButtonDropdown_child <?php echo strpos($current_page, '/projects/other') !== false ? 'navButtonActive navButtonDropdown_child_Active' : ''; ?>">
+                <img src="/img/gray_other.png" alt=""><p>Other</p>
             </span></a>
             <a href="/projects/homelab"><span class="navButtonDropdown_child <?php echo strpos($current_page, '/projects/homelab') !== false ? 'navButtonActive navButtonDropdown_child_Active' : ''; ?>">
                 <img src="/img/gray_cloud_server.png" alt=""><p>Homelab</p>
@@ -35,10 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdown = document.querySelector('.navButtonDropdown');
 
     // Function to toggle dropdown
-    function toggleDropdown() {
-        const isActive = dropdown.classList.toggle('active');
-        // Store the state in a cookie with SameSite=None and Secure attributes
-        document.cookie = 'dropdownOpen=' + isActive + '; expires=' + new Date(Date.now() + 86400000).toUTCString() + '; path=/; SameSite=None; Secure';
+    function toggleDropdown(event) {
+        const isDropdownChild = event.target.closest('.navButtonDropdown_child');
+        if (!isDropdownChild) {
+            const isActive = dropdown.classList.toggle('active');
+            // Store the state in a cookie with SameSite=None and Secure attributes
+            document.cookie = 'dropdownOpen=' + isActive + '; expires=' + new Date(Date.now() + 86400000).toUTCString() + '; path=/; SameSite=None; Secure';
+        }
     }
 
     // Event listener for dropdown click
