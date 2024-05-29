@@ -79,6 +79,10 @@
 .navButtons p{
     font-size: 18px;
     color: var(--light10);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Dropdown */
@@ -98,10 +102,13 @@
     grid-column: 3;
     grid-row: 1;
 }
-.navButtonDropdown:hover::after{
-    rotate: 90deg;
+.navButtonDropdown.active::after {
+    transform: rotate(90deg);
 }
-.navButtonDropdown:hover :is(i, a:has(span)){
+.navButtonDropdown.active a {
+    display: grid;
+}
+.navButtonDropdown.active i {
     display: grid;
 }
 .navButtonDropdown a:has(span){
@@ -109,7 +116,7 @@
     display: none;
 }
 .navButtonDropdown_child{
-    padding: 10px 15px 10px 15px;
+    padding: 10px;
     grid-template-columns: max-content 1fr max-content;
     align-items: center;
     gap: 10px;
@@ -121,7 +128,9 @@
 .navButtonDropdown_child:hover{
     background-color: var(--dark20) !important;
 }
-
+.navButtonDropdown_child_Active{
+    background-color: var(--dark20) !important;
+}
 .copyright p{
     color: var(--light10);
     font-size: 18px;

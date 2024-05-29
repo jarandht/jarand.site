@@ -1,5 +1,4 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/blocks/all.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

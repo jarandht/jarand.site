@@ -44,6 +44,9 @@ body{
     grid-template-rows: repeat(2, max-content);
     animation: fadeInn 2s;
 }
+h2{
+    text-transform: capitalize;
+}
 @keyframes fadeInn{
     0% {opacity: 0;}
     100% {opacity: 1;}
