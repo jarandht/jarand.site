@@ -2,8 +2,11 @@
 
 <?php
 // Get the current page from the request URI
-$current_page = $_SERVER['REQUEST_URI'];
+$current_page = rtrim($_SERVER['REQUEST_URI'], '/');
 
+$hostname = $_SERVER['SERVER_NAME'];
+
+$current_year = date('Y');
 ?>
 
 <nav class="nav">
@@ -12,7 +15,7 @@ $current_page = $_SERVER['REQUEST_URI'];
         <h1>Jarand Holmefjord Tyssen</h1>
     </div>
     <div class="navButtons">
-        <a href="/home"><div <?php echo $current_page === '/home' ? 'class="c"' : ''; ?>><img src="/img/homegrey.png" alt=""><p>Home</p></div></a>
+        <a href="/home"><div <?php echo $_SERVER['SCRIPT_NAME'] === '/home' ? 'class="c"' : ''; ?>><img src="/img/homegrey.png" alt=""><p>Home</p></div></a>
         <div class="navButtonDropdown <?php echo strpos($current_page, '/projects') !== false ? 'navButtonActive' : ''; ?> <?php echo isset($_SESSION['dropdownOpen']) && $_SESSION['dropdownOpen'] ? 'active' : ''; ?>">
             <img src="/img/gray_docs.png" alt=""><p>Projects</p>
             <i></i>
@@ -29,9 +32,10 @@ $current_page = $_SERVER['REQUEST_URI'];
         <a href="/personal_sites"><div <?php echo strpos($current_page, '/personal_sites') !== false ? 'class="navButtonActive"' : ''; ?>><img src="/img/gray_edit.png" alt=""><p>Personal Sites</p></div></a>
     </div>
     <div class="copyright">
-        <p>© - jarand.site - 2024</p>
+        <p>© - <?php echo $hostname; ?> - <?php echo $current_year; ?></p>
     </div>
 </nav>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,5 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
 </script>

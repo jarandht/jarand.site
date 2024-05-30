@@ -28,12 +28,17 @@ body{
     --light20: rgba(169, 169, 169, 0.507);
 }
 
-
-.contentContainer{
+.wrapper{
     height: 100%;
     background-color:var(--dark10);
     display: grid;
     grid-template-columns: max-content 1fr;
+}
+
+.content_container_parent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .main{
@@ -44,10 +49,12 @@ body{
     grid-template-rows: repeat(2, max-content);
     animation: fadeInn 2s;
 }
-h2{
-    text-transform: capitalize;
-}
+
 @keyframes fadeInn{
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+.SITE_URL_PATH{
+    text-transform: capitalize;
 }
