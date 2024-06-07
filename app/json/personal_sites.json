@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Authentik",
+        "url": "https://auth.jarand.site",
+        "display_url": "yes",
+        "img": "https://img.gamehub.community/ICO.png",
+        "description": "Personal identification provider.",
+        "align": "left"
+    },
+    {
+        "name": "Nextcloud",
+        "url": "https://cloud.jarand.site",
+        "display_url": "yes",
+        "img": "/img/cloud.png",
+        "description": "Personal cloud storage and data synchronization.",
+        "align": "left"
+    },
+    {
+        "name": "Jellyfin",
+        "url": "https://jellyfin.jarand.site",
+        "display_url": "yes",
+        "img": "/img/jellyfin.webp",
+        "description": "Personal media player.",
+        "align": "left"
+    },
+    {
+        "name": "Mealie",
+        "url": "https://mat.jarand.site",
+        "display_url": "yes",
+        "img": "/img/mealie.png",
+        "description": "Personal recipe management.",
+        "align": "left"
+    }
+]

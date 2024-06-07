@@ -1,37 +1,62 @@
 .cardsContainer{
     display: flex;
     flex-wrap: wrap;
+    justify-items: start;
+    justify-content: start;
+    flex-basis: auto;
+    flex-shrink: 3;
     gap: 10px;
 }
-.cardsContainer div{
-    width: max-content;
+.cardsContainer div {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 2px 0px var(--light10) !important;
     background-color: var(--dark20);
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     transition: .3s;
+    max-width: fit-content;
 }
-.cardsContainer div:hover{
+
+.cardsContainer div:hover {
     box-shadow: 0 0 0px 1px var(--light10) !important;
     background-color: var(--dark20);
 }
-.cardsContainer span{
+
+.cardsContainer span {
     padding: 20px;
 }
-.cardsContainer p{
-    text-align: center;
-    font-size: 30px;
+
+.cardsContainer p {
     color: var(--light00);
 }
-.cardsContainer .cardUrl{
+
+.cardsContainer .cardName {
+    font-size: 30px;
+}
+
+.cardsContainer .cardUrl {
     color: var(--light10);
     font-size: 15px;
-}
-.cardsContainer div img{
+    word-break: break-all;}
+
+.cardsContainer div img {
     height: 75px;
     width: 75px;
-    border-radius: 10000px;
+    border-radius: 5px;
+}
+
+.cardsContainer .cardDescription:empty {
+    display: none;
+}
+
+.cardsContainer .cardDescription {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid var(--light20);
+    font-size: 15px;
+    color: var(--light10);
+    text-wrap: wrap;
 }

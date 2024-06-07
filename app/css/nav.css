@@ -1,17 +1,46 @@
 .nav{
-    width: 250px;
-    padding: 20px;
+    z-index: 999;
     background-color: var(--dark20);
-    display: grid;
-    justify-items: center;
-    grid-template-rows: max-content 1fr max-content;
-    gap: 40px;
-    border-right: 1px solid var(--dark00);
-    animation: slideInn 1s;
 }
 @keyframes slideInn{
     0% {transform: translateX(-200px); opacity: 0;}
     100% {    transform: translateX(0px); opacity: 1;}
+}
+.navColapse{
+    z-index: 1000;
+    width: 100%;
+    height: max-content;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    margin-inline-start: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--dark10);
+}
+.navColapse:hover{
+    background-color: var(--dark19);
+    cursor: pointer;
+}
+.navColapse img:first-child{
+    height: 20px;
+    rotate: 180deg;
+}
+.navColapse img:last-child{
+    height: 20px;
+}
+.navContentContainer{
+    width: var(--navWidth);
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    grid-template-rows: max-content 1fr max-content;
+    gap: 40px;
 }
 .profile{
     height: max-content;
@@ -96,7 +125,7 @@
     display: block;
     height: 20px;
     width: 20px;
-    background-image: url(/img/gray_arrow_slim.png);
+    background-image: url(/img/nav_icons/gray_arrow_slim.png);
     background-size: cover;
     transition: .3s;
     grid-column: 3;
@@ -135,4 +164,32 @@
     color: var(--light10);
     font-size: 18px;
     text-transform: capitalize;
+}
+
+@media screen and (min-width: 700px) {
+    .nav{
+        /* animation: slideInn 1s; */
+        border-right: 1px solid var(--dark00);
+    }
+}
+@media screen and (max-width: 700px) {
+    .nav{
+        transition: transform 1s;
+        width: 100dvw;
+        height: 100%;
+        padding-top: 50px;
+        position: fixed;
+        top: 0;
+        overflow-y: scroll;
+    }
+    .navColapse{
+        display: flex;
+    }
+    .navContentContainer{
+        margin-inline: auto;
+    }
+}
+
+.navColapsed{
+    transform: translateX(-100dvw);
 }

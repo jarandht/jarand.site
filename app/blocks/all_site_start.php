@@ -15,3 +15,5 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/blocks/SITE_URL_PATH.php'; ?>
 
 <section class="content_container_parent">
+
+<script src="/js/site_config.js"></script>

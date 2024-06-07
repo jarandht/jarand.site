@@ -9,16 +9,14 @@
 }
 html{
     height: 100%;
-    width: 100%;
 }
 body{
     background-color: var(--dark20);
     height: 100%;
-    width: 100%;
 }
 
 :root{
-    --dark00: black;
+    --dark00: #000;
     --dark10: #111;
     --dark15: #151515;
     --dark19: #191919;
@@ -26,6 +24,7 @@ body{
     --light00: white;
     --light10: darkgray;
     --light20: rgba(169, 169, 169, 0.507);
+    --navWidth: 250px;
 }
 
 .wrapper{
@@ -36,8 +35,8 @@ body{
 }
 
 .content_container_parent{
-    display: flex;
-    flex-wrap: wrap;
+    z-index: 111;
+    max-width: calc(100% - var(--navWidth) + 20 + 20);
     gap: 15px;
 }
 
@@ -57,4 +56,17 @@ body{
 
 .SITE_URL_PATH{
     text-transform: capitalize;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+    .content_container_parent{
+        max-width: 100dvw;
+    }
+    .main{
+        padding: 10px;
+        padding-top: 60px;
+    }
 }

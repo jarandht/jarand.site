@@ -1,0 +1,33 @@
+[
+    {
+        "label": "Home",
+        "url": "/home",
+        "icon": "/img/nav_icons/homegrey.png"
+    },
+    {
+        "label": "Projects",
+        "icon": "/img/nav_icons/gray_docs.png",
+        "children": [
+            {
+                "label": "Websites",
+                "url": "/projects/websites",
+                "icon": "/img/nav_icons/gray_internet.png"
+            },
+            {
+                "label": "Other",
+                "url": "/projects/other",
+                "icon": "/img/nav_icons/gray_other.png"
+            },
+            {
+                "label": "Homelab",
+                "url": "/projects/homelab",
+                "icon": "/img/nav_icons/gray_cloud_server.png"
+            }
+        ]
+    },
+    {
+        "label": "Personal Sites",
+        "url": "/personal_sites",
+        "icon": "/img/nav_icons/gray_edit.png"
+    }
+]
