@@ -1,9 +1,9 @@
 [
     {
         "name": "Oatmeal",
-        "url": "https://github.com/BrodBoyChees/havremjelk",
+        "url": "https://github.com/jarandht/havremjelk",
         "display_url": "no",
-        "img": "https://github.com/BrodBoyChees/havremjelk/blob/main/data/img/oatmeal.png?raw=true",
+        "img": "https://github.com/jarandht/havremjelk/blob/main/data/img/oatmeal.png?raw=true",
         "description": "A personal econemy tracker.",
         "align": "center"
     }
