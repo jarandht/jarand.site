@@ -8,10 +8,6 @@ $hostname = $_SERVER['SERVER_NAME'];
 
 $current_year = date('Y');
 ?>
-<div class="navColapse">
-    <img src="/img/nav_icons/grey_angle-double-right.png" alt="">
-    <img src="/img/nav_icons/grey_angle-double-right.png" alt="">
-</div>
 <nav class="nav">
     <section class="navContentContainer">
         <div class="profile" id="profile">
@@ -41,13 +37,3 @@ $current_year = date('Y');
 
 
 <script src="/js/nav_dropdown.js"></script>
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const navCollapse = document.querySelector('.navColapse');
-            const nav = document.querySelector('.nav');
-
-            navCollapse.addEventListener('click', function() {
-                nav.classList.toggle('navColapsed');
-            });
-        });
-    </script>

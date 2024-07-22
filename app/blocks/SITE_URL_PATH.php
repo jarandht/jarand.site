@@ -1,4 +1,5 @@
 <h2 class="SITE_URL_PATH">
+
 <?php
 $url_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
@@ -21,4 +22,5 @@ $full_path = implode('/', $url_parts);
 // Output the full path
 echo $full_path;
 ?>
+
 </h2>

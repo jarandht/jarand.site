@@ -12,8 +12,8 @@
 
 <main class="main">
     
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/blocks/SITE_URL_PATH.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/blocks/topbar.php'; ?>
 
-<section class="content_container_parent">
+<section class="content_container">
 
 <script src="/js/site_config.js"></script>
