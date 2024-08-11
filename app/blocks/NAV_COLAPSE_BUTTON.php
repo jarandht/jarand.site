@@ -3,18 +3,18 @@
 <script>
 document.querySelector('.NAV_COLAPSE_BUTTON').addEventListener('click', function() {
   document.querySelectorAll('.nav').forEach(element => {
-    if (element.style.transform === 'translateX(-290px)') {
+    if (element.style.transform === 'translateX(-297px)') {
       element.style.transform = '';
     } else {
-      element.style.transform = 'translateX(-290px)';
+      element.style.transform = 'translateX(-297px)';
     }
   });
 
   document.querySelectorAll('.wrapper').forEach(element => {
-    if (element.style.transform === 'translateX(-290px)') {
+    if (element.style.transform === 'translateX(-297px)') {
       element.style.transform = '';
     } else {
-      element.style.transform = 'translateX(-290px)';
+      element.style.transform = 'translateX(-297px)';
     }
   });
 });

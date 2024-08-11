@@ -2,6 +2,8 @@
     overflow-y: auto;
     background-color: var(--dark20);
     animation: slideInn 1s;
+    display: grid;
+    grid-template-rows: 1fr;
 }
 @keyframes slideInn{
     0% {transform: translateX(-200px); opacity: 0;}
